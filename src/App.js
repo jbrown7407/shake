@@ -23,4 +23,17 @@ function App() {
   );
 }
 
+const fetchRandomDate = (): Promise<any> => {
+  return axios.get('https://randomuser.me/api')
+    .then(res => {
+    //handle success
+      console.log(res);
+
+    })
+    .catch(err => {
+      //handle error
+      console.error(err);
+  })
+}
+
 export default App;
