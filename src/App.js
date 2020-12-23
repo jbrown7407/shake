@@ -33,8 +33,8 @@ const fetchPerson = (): Promise<any> => {
       console.log(res);
       // console.log(res.data)
       let data = res
-     
-      console.log(data.data.results);
+      console.log(data.data.results[0].name);
+      console.log(data.data.results[0].gender);
     })
     .catch(err => {
       //handle error
