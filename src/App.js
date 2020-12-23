@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-// import 'unirest';
+import axios from "axios";
+
 
 function App() {
   return (
@@ -15,25 +16,31 @@ function App() {
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
+       
         >
           Learn React
         </a>
+    
       </header>
     </div>
   );
 }
 
-const fetchRandomDate = (): Promise<any> => {
+const fetchPerson = (): Promise<any> => {
   return axios.get('https://randomuser.me/api')
     .then(res => {
     //handle success
       console.log(res);
-
+      // console.log(res.data)
+      let data = res
+     
+      console.log(data.data.results);
     })
     .catch(err => {
       //handle error
       console.error(err);
   })
 }
+fetchPerson()
 
 export default App;
