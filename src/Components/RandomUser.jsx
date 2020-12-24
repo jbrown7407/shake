@@ -34,6 +34,7 @@ class RandomUser extends Component {
                             <h2>{user.gender} </h2>
                             <h3>{user.cell} </h3>
                             <h3>{user.email} </h3>
+                            {/* <h3>{user.dob} </h3> */}
                             </div>;
                     }
                     
@@ -60,7 +61,7 @@ class RandomUser extends Component {
           }
 
         return (
-            <div>
+            <div className="RandomUser">
                 {user}
             </div>
         )
